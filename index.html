@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ayu Nadia — Portfolio</title>
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<style>
+  :root{--bg:#fff;--ink:#111;--muted:#888;--line:#e5e5e5;--ph1:#f4f4f4;--maxw:1280px;--gap:clamp(10px,1.6vw,18px)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:-apple-system,"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(16px,3vw,36px)}
+  .head{padding:24px 0 18px;border-bottom:1px solid var(--line)}
+  .head-meta{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:18px;gap:12px;flex-wrap:wrap}
+  .label{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted)}
+  .name{font-size:clamp(24px,5vw,40px);letter-spacing:.18em;text-transform:uppercase;font-weight:500;line-height:1}
+  .stats{display:flex;flex-wrap:wrap;gap:4px 28px;padding:14px 0;border-bottom:1px solid var(--line);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+  .stats span{color:var(--muted)}
+  .stats b{color:var(--ink);font-weight:500;margin-left:5px}
+  .tabs{display:flex;gap:28px;padding:15px 0;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:30;flex-wrap:wrap}
+  .tab{background:none;border:none;cursor:pointer;font:inherit;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);padding:4px 0;position:relative;transition:color .15s}
+  .tab[aria-selected="true"]{color:var(--ink)}
+  .tab[aria-selected="true"]::after{content:"";position:absolute;left:0;right:0;bottom:-16px;height:1px;background:var(--ink)}
+  .tab:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+  .panel{padding:28px 0 72px}
+  .panel[hidden]{display:none}
+  .col-grid{columns:3 260px;column-gap:var(--gap)}
+  .col-grid figure{break-inside:avoid;margin-bottom:var(--gap)}
+  .dig-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:var(--gap);align-items:start}
+  .tile img{width:100%;height:auto;display:block}
+  .tile{overflow:hidden;background:var(--ph1)}
+  figcaption{padding:7px 0 4px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+  figcaption .desc{font-size:10px;letter-spacing:.1em;text-transform:none;color:var(--muted);margin-top:2px;font-style:italic}
+  .ig-head{display:flex;align-items:center;gap:10px;margin-bottom:18px;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+  .ig-head a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+  .ig-head a:hover{border-color:var(--ink)}
+  footer{border-top:1px solid var(--line);padding:28px 0 52px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:flex;flex-wrap:wrap;gap:10px 32px;align-items:center}
+  footer a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+  footer a:hover{border-color:transparent}
+  @media(max-width:540px){.col-grid{columns:2 140px}.dig-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}.tabs{gap:18px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="head">
+    <div class="head-meta">
+      <div class="label">Independent · Not currently represented</div>
+      <div class="label">Commercial · Petite · Editorial · Swimwear</div>
+    </div>
+    <h1 class="name">Ayu Nadia</h1>
+  </header>
+
+  <div class="stats">
+    <span>Height <b>160 cm</b></span>
+    <span>Bust <b>80</b></span>
+    <span>Waist <b>66</b></span>
+    <span>Hips <b>88</b></span>
+    <span>Shoes <b>38</b></span>
+    <span>Hair <b>Copper Red</b></span>
+    <span>Eyes <b>Brown</b></span>
+  </div>
+
+  <div class="tabs" role="tablist" aria-label="Board sections">
+    <button class="tab" role="tab" id="t-port" aria-controls="p-port" aria-selected="true">Portfolio</button>
+    <button class="tab" role="tab" id="t-dig"  aria-controls="p-dig"  aria-selected="false">Digitals</button>
+    <button class="tab" role="tab" id="t-ig"   aria-controls="p-ig"   aria-selected="false">Instagram</button>
+  </div>
+
+  <!-- PORTFOLIO -->
+  <section class="panel" id="p-port" role="tabpanel" aria-labelledby="t-port">
+    <div class="col-grid">
+      <figure class="tile"><img src="images/01-headshot.jpg" alt="Headshot" loading="lazy"><figcaption>01 — Headshot</figcaption></figure>
+      <figure class="tile"><img src="images/02-beauty.jpg" alt="Beauty" loading="lazy"><figcaption>02 — Beauty</figcaption></figure>
+      <figure class="tile"><img src="images/03-studio.jpg" alt="Studio" loading="lazy"><figcaption>03 — Studio</figcaption></figure>
+      <figure class="tile"><img src="images/04-fashion.jpg" alt="Fashion" loading="lazy"><figcaption>04 — Fashion<p class="desc">London Fashion Week 2025</p></figcaption></figure>
+      <figure class="tile"><img src="images/05-editorial.jpg" alt="Editorial" loading="lazy"><figcaption>05 — Editorial</figcaption></figure>
+      <figure class="tile"><img src="images/06-swimwear.jpg" alt="Swimwear" loading="lazy"><figcaption>06 — Swimwear</figcaption></figure>
+      <figure class="tile"><img src="images/07-editorial2.jpg" alt="Editorial" loading="lazy"><figcaption>07 — Editorial</figcaption></figure>
+      <figure class="tile"><img src="images/08-editorial3.jpg" alt="Editorial" loading="lazy"><figcaption>08 — Editorial</figcaption></figure>
+      <figure class="tile"><img src="images/09-editorial4.jpg" alt="Editorial" loading="lazy"><figcaption>09 — Editorial</figcaption></figure>
+      <figure class="tile"><img src="images/10-lifestyle.jpg" alt="Lifestyle" loading="lazy"><figcaption>10 — Lifestyle<p class="desc">Santo Remedio Mexican Restaurant, London, UK, 2025</p></figcaption></figure>
+      <figure class="tile"><img src="images/11-gown.jpg" alt="Gown" loading="lazy"><figcaption>11 — Gown</figcaption></figure>
+      <figure class="tile"><img src="images/12-hair.jpg" alt="Hair" loading="lazy"><figcaption>12 — Hair<p class="desc">Hair Demo Model, Toni &amp; Guy Essensuals, Bali, 2026</p></figcaption></figure>
+    </div>
+  </section>
+
+  <!-- DIGITALS -->
+  <section class="panel" id="p-dig" role="tabpanel" aria-labelledby="t-dig" hidden>
+    <div class="dig-grid">
+      <figure class="tile"><img src="images/dig-front.jpg" alt="Front" loading="lazy"><figcaption>Front</figcaption></figure>
+      <figure class="tile"><img src="images/dig-side.jpg" alt="Side profile" loading="lazy"><figcaption>Side profile</figcaption></figure>
+      <figure class="tile"><img src="images/dig-back.jpg" alt="Back" loading="lazy"><figcaption>Back</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM -->
+  <section class="panel" id="p-ig" role="tabpanel" aria-labelledby="t-ig" hidden>
+    <div class="ig-head">
+      <span>Instagram</span>
+      <a href="https://instagram.com/ayuxnadia" target="_blank" rel="noopener">@ayuxnadia</a>
+    </div>
+    <div class="elfsight-app-aecf4b28-e61e-4fb8-88a9-42f558dc2de3" data-elfsight-app-lazy></div>
+  </section>
+
+  <footer>
+    <span>Bookings &amp; enquiries — <a href="mailto:ayunadiaa@yahoo.com">ayunadiaa@yahoo.com</a></span>
+    <span>Instagram — <a href="https://instagram.com/ayuxnadia" target="_blank" rel="noopener">@ayuxnadia</a></span>
+  </footer>
+
+</div>
+<script>
+  const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
+  function select(tab) {
+    tabs.forEach(t => {
+      const on = t === tab;
+      t.setAttribute('aria-selected', on);
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+  }
+  tabs.forEach((tab, i) => {
+    tab.addEventListener('click', () => select(tab));
+    tab.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+        e.preventDefault();
+        const dir = e.key === 'ArrowRight' ? 1 : -1;
+        const next = tabs[(i + dir + tabs.length) % tabs.length];
+        next.focus(); select(next);
+      }
+    });
+  });
+</script>
+</body>
+</html>
